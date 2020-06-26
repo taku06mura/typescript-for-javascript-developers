@@ -19,5 +19,8 @@
   "homepage": "https://github.com/taku06mura/typescript-for-javascript-developers#readme",
   "dependencies": {
     "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "ts-node": "^8.6.2"
   }
 }

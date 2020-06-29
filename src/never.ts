@@ -10,6 +10,8 @@ try {  //エラーハンドリングcathでエラーを拾って、プログラ�
   console.log({error});
 }
 
+let foo: void = undefined;
+let bar: never = error('only me'); //errorの関数はnever型を返す関数と定義
 
 
 //void型と、never型の違い

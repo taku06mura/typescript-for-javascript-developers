@@ -15,14 +15,14 @@ class Person {
     this.nationality = nationality;
   }
 
-  profile (): string { //profileメソッド。文字列を返す。profileは関数なので()を書く。
+  profile (): string { // profileメソッド。文字列を返す。profileは関数なので()を書く。
     return`name: ${this.name}, age: ${this.age}`;
   }
 }
 
-class Android extends Person { //Personクラスを継承した子クラスAndroidクラス。extendsは継承の意味。
+class Android extends Person { // Personクラスを継承した子クラスAndroidクラス。extendsは継承の意味。
   constructor(name: string, age: number, nationality: string) {
-    super(name, age, nationality) //superメソッドを使うと、親クラスのメソッド、この場合constructorメソッド呼び出すことができる。親クラスのconstructorメソッドで初期化される。
+    super(name, age, nationality) // superメソッドを使うと、親クラスのメソッド、この場合constructorメソッド呼び出すことができる。親クラスのconstructorメソッドで初期化される。
   }
   profile(): string {
     return`name: ${this.name}, age: ${this.age}, nationality: ${this.nationality}`;
@@ -30,8 +30,9 @@ class Android extends Person { //Personクラスを継承した子クラスAndro
   }
 }
 
-let taro = new Person('Taro', 30, 'Japan'); //()の中には実引数。インスタンス名taro
-console.log(taro.profile()); //ここで呼び出しているのはインスタンスではなく、関数profileなのでprivateのageも呼び出せる。呼び出せないのはあくまでPerson classのインスタンスからだけ。
+let taro = new Person('Taro', 30, 'Japan'); //() の中には実引数。インスタンス名taro
+console.log(taro.profile()); // ここで呼び出しているのはインスタンスではなく、関数profileなのでprivateのageも呼び出せる。呼び出せないのはあくまでPerson classのインスタンスからだけ。
 console.log(taro.name);
-// console.log(taro.age); //class Personの定義で、アクセス修飾子privateを書いているので呼び出せなくなりエラーになる。あくまでPerson classのインスタンスから呼び出せなくなっただけ。Person classの内部の処理は可能${this.age}。
+// console.log(taro.age); //class Personの定義で、アクセス修飾子privateを書いているので呼び出せなくなりエラーになる。
+// あくまでPerson classのインスタンスから呼び出せなくなっただけ。Person classの内部の処理は可能${this.age}。
 // let hanako = new Person();
